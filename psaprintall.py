@@ -41,20 +41,26 @@ for i in range(0, number_of_loops):
 
     running = if_process_is_running_by_exename(exename)
 
+    while running == True:
+        pyautogui.click(76, 1055)
+        break
+    else:
+        pass
+
     '''Increase copies by 1'''
-    pyautogui.click(2332, 282)
+ #   pyautogui.click(2332, 282)
 
     time.sleep(0.2)
 
-    # '''Print Button On Popop '''
-    # #pyautogui.click(2212, 414)
+    '''Print Button On Popop '''
+    pyautogui.click(2212, 414)
 
-    # time.sleep(0.2)
+    time.sleep(2)
 
-    '''Cancel Button on Popup for testing'''
-    pyautogui.click(2289, 409)
+    # '''Cancel Button on Popup for testing'''
+    # pyautogui.click(2289, 409)
 
-    time.sleep(0.2)
+    time.sleep(0.5)
 
     '''Close Document Viewer'''
     pyautogui.click(3829, 7)
@@ -67,22 +73,17 @@ for i in range(0, number_of_loops):
 
     time.sleep(0.5)
 
-    # '''Print Button On Popup'''
-    #  pyautogui.click(2212, 414)
+    '''Print Button On Popup'''
+    pyautogui.click(2212, 414)
 
-    '''Cancel Button on Popup for testing'''
-    pyautogui.click(2289, 409)
+    # '''Cancel Button on Popup for testing'''
+    # pyautogui.click(2289, 409)
 
-    time.sleep(0.25)
+    time.sleep(2)
 
     '''Close Document Viewer '''
     pyautogui.click(3829, 7)
 
-    if if_process_is_running_by_exename == True:
-        pyautogui.click(72, 1058)
-        pyautogui.click(72, 1058)
-    else:
-        pass
 
     while running == True:
         running = if_process_is_running_by_exename(exename)
@@ -91,11 +92,15 @@ for i in range(0, number_of_loops):
         pyautogui.keyDown('ctrl')
         pyautogui.press('p')
 
-        '''cancel button on edge for testing'''
-        time.sleep(1)
-        pyautogui.click(284, 923)
+        # '''cancel button on edge for testing'''
+        # time.sleep(1.2)
+        # pyautogui.click(284, 923)
 
-        time.sleep(0.2)
+        '''Print button on edge'''
+        time.sleep(1.2)
+        pyautogui.click(134, 936)
+
+        time.sleep(0.75)
         pyautogui.press('w')
         pyautogui.keyUp('ctrl')
     else:
@@ -104,5 +109,6 @@ for i in range(0, number_of_loops):
     pyautogui.click(685, 603)
     pyautogui.press('down')
     pyautogui.click(139, 549)
+    time.sleep(1.5)
 
 
