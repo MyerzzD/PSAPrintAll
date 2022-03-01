@@ -33,7 +33,6 @@ def if_process_is_running_by_exename(exename):
 '''loops printing process'''
 for i in range(0, number_of_loops):
 
-    time.sleep(5)
     '''Print Document Viewer'''
     pyautogui.click(1968, 33)
     pyautogui.click(1968, 33)
@@ -48,19 +47,18 @@ for i in range(0, number_of_loops):
         pass
 
     '''Increase copies by 1'''
- #   pyautogui.click(2332, 282)
+    pyautogui.click(2332, 282)
 
-    time.sleep(0.2)
+    time.sleep(0.5)
 
     '''Print Button On Popop '''
     pyautogui.click(2212, 414)
-
-    time.sleep(2)
+    time.sleep(2.5)
 
     # '''Cancel Button on Popup for testing'''
     # pyautogui.click(2289, 409)
 
-    time.sleep(0.5)
+    # time.sleep(1)
 
     '''Close Document Viewer'''
     pyautogui.click(3829, 7)
@@ -71,7 +69,7 @@ for i in range(0, number_of_loops):
     pyautogui.click(1968, 33)
     pyautogui.click(1968, 33)
 
-    time.sleep(0.5)
+    time.sleep(2)
 
     '''Print Button On Popup'''
     pyautogui.click(2212, 414)
@@ -84,6 +82,7 @@ for i in range(0, number_of_loops):
     '''Close Document Viewer '''
     pyautogui.click(3829, 7)
 
+    running = if_process_is_running_by_exename(exename)
 
     while running == True:
         running = if_process_is_running_by_exename(exename)
