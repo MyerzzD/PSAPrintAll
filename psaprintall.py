@@ -26,6 +26,8 @@ pyautogui.click(240, 652)
 pyautogui.click(139, 549)
 time.sleep(5) #waits for docs to open
 
+#commit test
+
 def if_process_is_running_by_exename(exename):
     for proc in psutil.process_iter(['pid', 'name']):
         if proc.info['name'] == exename:
