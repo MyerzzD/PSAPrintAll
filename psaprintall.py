@@ -4,8 +4,6 @@ import psutil
 from tkinter import simpledialog, ttk 
 from tkinter import *
 
-#This is a git test
-
 exename ='msedge.exe'
 #print(pyautogui.position())
 
@@ -26,8 +24,6 @@ pyautogui.click(240, 652)
 pyautogui.click(139, 549)
 time.sleep(5) #waits for docs to open
 
-#commit test
-
 def if_process_is_running_by_exename(exename):
     for proc in psutil.process_iter(['pid', 'name']):
         if proc.info['name'] == exename:
@@ -37,7 +33,7 @@ def if_process_is_running_by_exename(exename):
 '''loops printing process'''
 for i in range(0, number_of_loops):
 
-    time.sleep(5)
+    time.sleep(6)
     '''Print Document Viewer'''
     pyautogui.click(1968, 33)
     pyautogui.click(1968, 33)
@@ -51,9 +47,9 @@ for i in range(0, number_of_loops):
     time.sleep(0.2)
 
     # '''Print Button On Popop '''
-    # #pyautogui.click(2212, 414)
+    # pyautogui.click(2212, 414)
 
-    # time.sleep(0.2)
+    # time.sleep(2)
 
     '''Cancel Button on Popup for testing'''
     pyautogui.click(2289, 409)
@@ -72,36 +68,48 @@ for i in range(0, number_of_loops):
     time.sleep(0.5)
 
     # '''Print Button On Popup'''
-    #  pyautogui.click(2212, 414)
+    # pyautogui.click(2212, 414)
 
     '''Cancel Button on Popup for testing'''
     pyautogui.click(2289, 409)
 
-    time.sleep(0.25)
+    time.sleep(2)
 
     '''Close Document Viewer '''
     pyautogui.click(3829, 7)
 
-    if if_process_is_running_by_exename == True:
+    # if if_process_is_running_by_exename == True:
+    #     running = if_process_is_running_by_exename(exename)
+    #     pyautogui.click(72, 1058)
+    #     pyautogui.click(72, 1058)
+    #     time.sleep(0.3)
+    # else:
+    #     pass
+
+
+    if running == True:
+        running = if_process_is_running_by_exename(exename)
         pyautogui.click(72, 1058)
         pyautogui.click(72, 1058)
+        time.sleep(3)
     else:
         pass
-
+    
     while running == True:
         running = if_process_is_running_by_exename(exename)
         pyautogui.click(822, 367)
-        time.sleep(1)
+        time.sleep(0.3)
         pyautogui.keyDown('ctrl')
         pyautogui.press('p')
 
         '''cancel button on edge for testing'''
-        time.sleep(1)
+        time.sleep(1.2)
         pyautogui.click(284, 923)
 
-        time.sleep(0.2)
+        time.sleep(0.5)
         pyautogui.press('w')
         pyautogui.keyUp('ctrl')
+        time.sleep(2)
     else:
         pass
 
